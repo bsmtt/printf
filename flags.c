@@ -11,7 +11,7 @@ int set_flags(const char *c, flag_t *flags)
 {
 if (!*c)
 return (0);
-if (!flags->precision && get_width(c, flags))
+if (get_width(c, flags))
 return (1);
 switch (*c)
 {
@@ -43,11 +43,7 @@ case 'R':
 flags->rotate = 1;
 break;
 case '.':
-c++;
-flags->precision = 5;
-while(isdigit(*c))
-	c++;
-c--;
+flags->precision = 1;
 break;
 default:
 return (0);
