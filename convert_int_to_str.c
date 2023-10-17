@@ -2,6 +2,7 @@
 /**
  * print_converted_int - print number in str
  * @str: text to print
+ * @flags: flags
  * Return: number of characters printed
  */
 int print_converted_int(char *str, flag_t *flags)
