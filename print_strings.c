@@ -92,8 +92,8 @@ hex = converter(str[i], 20, 16, flags);
 if (!hex)
 return (-1);
 /*print last two digits in hex*/
-_write_buffer(hex[14]);
-_write_buffer(hex[15]);
+_write_buffer(hex[18]);
+_write_buffer(hex[19]);
 free(hex);
 length += 4;
 }
