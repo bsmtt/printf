@@ -10,11 +10,10 @@
  */
 int main(void)
 {
-	int len, len2;
 	long int l = UINT_MAX;
 
 	l += 1024;
-	len = _printf("%b", l);
+	 _printf("%b", l);
 
 	return (0);
 }

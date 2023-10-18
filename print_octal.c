@@ -40,7 +40,7 @@ return (print_converted_int(octal, flags));
  */
 int print_binary(va_list *args, flag_t *flags)
 {
-unsigned long int n, i, flag = 0;
+unsigned long int n;
 char *binary;
 
 n = va_arg(*args, long int);
