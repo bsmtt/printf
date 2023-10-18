@@ -1,6 +1,6 @@
 #include "main.h"
 #include <string.h>
-
+#include <ctype.h>
 /**
  * print_char - writes the char from args to stdout
  * @args: args to get next arg char
@@ -46,7 +46,7 @@ if (s == NULL)
 {
 s = "(null)";
 }
-if (precision)
+if (precision == 3)
 {
 while (*s && i < precision)
 {
@@ -106,3 +106,34 @@ i++;
 }
 return (length);
 }
+
+/**
+ * print_rotate - prints a string
+ * @args: args to get next arg char*
+ * @flags: flags for format string
+ * Return: number of printed chargcters
+ */
+int print_rotate(va_list *args, flag_t *flags)
+{
+	char *s = va_arg(*args, char *);
+	int len = strlen(s);
+	int i = 0;
+
+	(void) flags;
+for (; i < len; i++)
+{
+        if (isalpha(s[i]))
+        {
+                if (islower(s[i]))
+                        _write_buffer((s[i] - 'a' + 13) % 26 + 'a');
+                else
+                        _write_buffer((s[i] - 'A' + 13) % 26 + 'A');
+        }
+        else
+        {
+                _write_buffer(s[i]);
+        }
+}
+	return (i);
+}
+
