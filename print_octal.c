@@ -40,28 +40,12 @@ return (print_converted_int(octal, flags));
  */
 int print_binary(va_list *args, flag_t *flags)
 {
-long int n, i, flag = 0;
+unsigned long int n, i, flag = 0;
 char *binary;
 
 n = va_arg(*args, long int);
 binary = u_convert(n, 32, 2, flags);
 if (!binary)
 return (-1);
-/* for negative number convert 1 ,0*/
-if (n < 0)
-{
-for (i = 0; binary[i]; i++)
-{
-if (binary[i + 1] == '1' && flag == 0)
-flag = 1;
-if (flag == 1)
-{
-if (binary[i] == '0')
-binary[i] = '1';
-else
-binary[i] = '0';
-}
-}
-}
 return (print_converted_int(binary, flags));
 }
