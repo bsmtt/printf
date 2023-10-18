@@ -43,7 +43,7 @@ int print_binary(va_list *args, flag_t *flags)
 unsigned long int n;
 char *binary;
 
-n = va_arg(*args, long int);
+n = va_arg(*args, unsigned long int);
 binary = u_convert(n, 32, 2, flags);
 if (!binary)
 return (-1);
