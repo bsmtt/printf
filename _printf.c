@@ -25,10 +25,9 @@ if (startSpecifier == 1)
 reset_flags(&flags);
 while (set_flags(c + i, &flags))
 i++;
-if(!c[i] || c[i] == '\n')
+if (!c[i] || c[i] == '\n')
 {
-_write_buffer('%'), _write_buffer('\n'), length = length + 2;
-goto endprint;
+_write_buffer('%'), _write_buffer('\n'), length = length + 2, goto endprint;
 }
 startIndex = i;
 newLength = get_specifier_handler(c + i, &args, &flags);
@@ -46,8 +45,7 @@ _write_buffer(c[i]), length++;
 i++;
 }
 endprint:
-va_end(args);
-_write_buffer(0);
+va_end(args), _write_buffer(0);
 return (length);
 }
 /**
