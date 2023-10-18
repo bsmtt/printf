@@ -25,6 +25,11 @@ if (startSpecifier == 1)
 reset_flags(&flags);
 while (set_flags(c + i, &flags))
 i++;
+if(!c[i] || c[i] == '\n')
+{
+_write_buffer('%'), length++;
+goto endprint;
+}
 startIndex = i;
 newLength = get_specifier_handler(c + i, &args, &flags);
 if (newLength == -1)
