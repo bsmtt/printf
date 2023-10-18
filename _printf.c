@@ -27,7 +27,7 @@ while (set_flags(c + i, &flags))
 i++;
 if(!c[i] || c[i] == '\n')
 {
-_write_buffer('%'), length++;
+_write_buffer('%'), _write_buffer('\n'), length = length + 2;
 goto endprint;
 }
 startIndex = i;
