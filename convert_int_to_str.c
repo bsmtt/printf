@@ -81,7 +81,9 @@ for (i = 0; i < s; i++)
 str[i] = '0';
 str[s] = '\0';
 
-if (flags->negative)
+if (flags->negative && n == LONG_MIN)
+n = LONG_MAX;
+else if (flags->negative)
 n = -n;
 /*convert to str in string*/
 for (i = s - 1; n > 0; i--)
@@ -90,6 +92,8 @@ if (flags->upperHex && (n % b) > 9 && b == 16)
 str[i] = (n % b) + 55;
 else if (!flags->upperHex && (n % b) > 9 && b == 16)
 str[i] = (n % b) + 87;
+else if (i == s - 1 && b == 10 && n == LONG_MAX && flags->negative == 1)
+str[i] = '8';
 else
 str[i] = (n % b) + '0';
 

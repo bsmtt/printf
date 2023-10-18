@@ -22,10 +22,10 @@ if (c[i] == '%')
 startSpecifier = 1, i++;
 if (startSpecifier == 1)
 {
-startIndex = i;
 reset_flags(&flags);
 while (set_flags(c + i, &flags))
 i++;
+startIndex = i;
 newLength = get_specifier_handler(c + i, &args, &flags);
 if (newLength == -1)
 goto endprint;
