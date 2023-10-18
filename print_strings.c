@@ -88,7 +88,7 @@ _write_buffer('\\');
 _write_buffer('x');
 
 flags->upperHex = 87;
-hex = converter(str[i], 20, 16, flags);
+hex = u_converter(str[i], 20, 16, flags);
 if (!hex)
 return (-1);
 /*print last two digits in hex*/
