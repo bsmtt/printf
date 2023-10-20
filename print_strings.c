@@ -46,7 +46,7 @@ if (s == NULL)
 {
 s = "(null)";
 }
-if (precision == 3)
+if (precision)
 {
 while (*s && i < precision)
 {
@@ -136,4 +136,3 @@ for (; i < len; i++)
 }
 	return (i);
 }
-
