@@ -123,17 +123,17 @@ int i = 0;
 (void) flags;
 for (; i < len; i++)
 {
-        if (isalpha(s[i]))
-        {
-                if (islower(s[i]))
-                        _write_buffer((s[i] - 'a' + 13) % 26 + 'a');
-                else
-                        _write_buffer((s[i] - 'A' + 13) % 26 + 'A');
-        }
-        else
-        {
-                _write_buffer(s[i]);
-        }
+if (isalpha(s[i]))
+{
+if (islower(s[i]))
+_write_buffer((s[i] - 'a' + 13) % 26 + 'a');
+else
+_write_buffer((s[i] - 'A' + 13) % 26 + 'A');
 }
-	return (i);
+else
+{
+_write_buffer(s[i]);
+}
+}
+return (i);
 }
