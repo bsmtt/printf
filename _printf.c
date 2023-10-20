@@ -66,7 +66,7 @@ specifier_handler specifiers[] = {
 {"o", print_octal}, {"b", print_binary},
 {"S", print_ustring}, {"p", print_pointer}, 
 {"R", print_rotate}};
-while (i < 12)
+while (i < 13)
 {
 if (specifiers[i].specifier[0] == *format)
 {
