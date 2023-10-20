@@ -1,6 +1,7 @@
 #include "main.h"
-#include <string.h>
 #include <ctype.h>
+#include <string.h>
+
 /**
  * print_char - writes the char from args to stdout
  * @args: args to get next arg char
@@ -115,11 +116,11 @@ return (length);
  */
 int print_rotate(va_list *args, flag_t *flags)
 {
-	char *s = va_arg(*args, char *);
-	int len = strlen(s);
-	int i = 0;
+char *s = va_arg(*args, char *);
+int len = strlen(s);
+int i = 0;
 
-	(void) flags;
+(void) flags;
 for (; i < len; i++)
 {
         if (isalpha(s[i]))
