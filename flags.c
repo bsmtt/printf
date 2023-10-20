@@ -65,7 +65,6 @@ flags->zero = 0;
 flags->minus = 0;
 flags->zero = 0;
 flags->minus = 0;
-flags->rotate = 0;
 flags->upperHex = 0;
 flags->negative = 0;
 }

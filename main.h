@@ -48,7 +48,6 @@ int width;
 int zero;
 int minus;
 int reverse;
-int rotate;
 int upperHex;
 int negative;
 } flag_t;
@@ -77,4 +76,5 @@ int printStartEnd(const char *str, int strat, int end);
 int get_width(const char *c, flag_t *flags);
 int get_str_length(char *str);
 int print_rotate(va_list *args, flag_t *flags);
+
 #endif

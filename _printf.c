@@ -9,7 +9,7 @@ int _printf(const char *const format, ...)
 {
 int length = 0, i = 0, startIndex, newLength, startSpecifier;
 const char *c;
-flag_t flags = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+flag_t flags = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
 va_list args;
 
 va_start(args, format);
