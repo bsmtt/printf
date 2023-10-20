@@ -1,4 +1,6 @@
 #include "main.h"
+#include <string.h>
+
 /**
  * print_pointer - print pointer address of input
  * @args: args to get next arg int
@@ -34,3 +36,24 @@ length += (print_converted_int(hex, flags));
 return (length);
 }
 
+
+/**
+ * print_reverse - prints a string
+ * @args: args to get next arg char*
+ * @flags: flags for format string
+ * Return: number of printed chargcters
+ */
+int print_reverse(va_list *args, flag_t *flags)
+{
+char *s = va_arg(*args, char *);
+int len = strlen(s);
+int i = len - 1;
+
+(void) flags;
+
+for (; i >= 0; i--)
+{
+_write_buffer(s[i]);
+}
+return (len);
+}

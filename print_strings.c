@@ -137,24 +137,3 @@ _write_buffer(s[i]);
 }
 return (i);
 }
-
-/**
- * print_reverse - prints a string
- * @args: args to get next arg char*
- * @flags: flags for format string
- * Return: number of printed chargcters
- */
-int print_reverse(va_list *args, flag_t *flags)
-{
-char *s = va_arg(*args, char *);
-int len = strlen(s);
-int i;
-
-(void) flags;
-
-for (i = len - 1; i >= 0; i--)
-{
-	_write_buffer(s[i]);
-}
-return (len);
-}
