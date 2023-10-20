@@ -32,7 +32,6 @@ int (*handler)();
  * @zero: flag
  * @minus: flag
  * @reverse: flag
- * @rotate: flag
  * @upperHex: flag
  * @negative: flag
  */
