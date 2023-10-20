@@ -38,9 +38,6 @@ break;
 case 'r':
 flags->reverse = 1;
 break;
-case 'R':
-flags->rotate = 1;
-break;
 case '.':
 flags->precision = 1;
 break;
