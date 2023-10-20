@@ -76,5 +76,6 @@ int printStartEnd(const char *str, int strat, int end);
 int get_width(const char *c, flag_t *flags);
 int get_str_length(char *str);
 int print_rotate(va_list *args, flag_t *flags);
+int print_reverse(va_list *args, flag_t *flags);
 
 #endif

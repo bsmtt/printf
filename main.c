@@ -15,8 +15,9 @@ int main(void)
 	_printf("%s\n", str);
 	_printf("%!\n");
 	_printf("%K\n");
-	_printf("%R\n", str);
-
+	_printf("%r\n", str);
+	printf("Reversed string: %r\n", str);
+	_printf("Reversed string: %r\n", str);
 	fflush(stdout);
 	if (len != len2)
 	{
