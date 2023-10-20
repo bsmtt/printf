@@ -1,2 +1,3 @@
-_printf() function implementation
-*print string
+# _printf() function implementation
+## print string
+## print numbers
