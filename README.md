@@ -1,3 +1,4 @@
-# _printf() function implementation
+# _printf function implementation
 ## print string
 ## print numbers
+## handle spaces and plus
